@@ -33,8 +33,9 @@ class BaseWebsiteHandler(ABC):
             name = Format.get_user_product_name(raw_name.lower())
             price = self._get_product_price()
             currency = self._get_product_currency()
+            quantity = self._get_product_quantity()
             id = self._get_product_id()
-            self.info = Info(name, price, currency, id)
+            self.info = Info(name, price, currency, id, quantity)
             return self.info
         except (AttributeError, ValueError, TypeError):
             logging.getLogger(__name__).exception(f"Could not get all the data needed from url: {self.url}")
@@ -69,6 +70,10 @@ class BaseWebsiteHandler(ABC):
 
     @abstractmethod
     def get_short_url(self) -> str:
+        pass
+
+    @abstractmethod
+    def _get_product_quantity(self) -> int:
         pass
 
 
@@ -449,6 +454,10 @@ class PromelecHandler(BaseWebsiteHandler):
 
     def _get_product_id(self) -> str:
         return self.request_data.find("div", class_="popup-product-inf__right popup-product-inf__articul").text
+
+    def _get_product_quantity(self) -> int:
+        #print(self.request_data.find_all("span", class_="table-list__counter")[-2].text.replace('шт', '').strip())
+        return int(self.request_data.find_all("span", class_="table-list__counter")[-2].text.replace('шт', '').strip())
 
 
     def get_short_url(self) -> str:

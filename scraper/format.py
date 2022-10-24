@@ -10,6 +10,7 @@ class Info:
     price: float
     currency: str
     id: str
+    quantity: int
     valid: bool = True
 
 

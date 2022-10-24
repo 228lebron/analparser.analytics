@@ -37,7 +37,7 @@ def save_product(category: str, website_handler: BaseWebsiteHandler, product_inf
 
     # doesn't return anything because the function mutates the dictionary in the variable 'product_data',
     # which is a part of the dictionary in the variable 'data'
-    add_product_datapoint(product_data, product_info.price)
+    add_product_datapoint(product_data, product_info.price, product_info.quantity)
 
     # save the dictionary in the variable 'data' because it has been mutated with the new datapoint of the product
     Filemanager.save_record_data(data)
@@ -55,11 +55,11 @@ def get_product_data(data: dict, category: str, name: str, website_name: str) ->
         return None
 
 
-def add_product_datapoint(product_data: dict, price: float) -> None:
+def add_product_datapoint(product_data: dict, price: float, quantity: int) -> None:
     date = datetime.today().strftime("%Y-%m-%d")
     product_datapoints = product_data["datapoints"]
 
-    new_datapoint = {"date": date, "price": price}
+    new_datapoint = {"date": date, "price": price, "quantity": quantity}
 
     if len(product_datapoints) == 0:
         product_datapoints.append(new_datapoint)
@@ -68,5 +68,6 @@ def add_product_datapoint(product_data: dict, price: float) -> None:
     latest_datapoint = product_datapoints[-1]
     if latest_datapoint["date"] == date:
         latest_datapoint["price"] = price
+        latest_datapoint["quantity"] = quantity
     else:
         product_datapoints.append(new_datapoint)
