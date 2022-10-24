@@ -1,0 +1,355 @@
+2022-10-24 21:01:03,071 : INFO : scraper.add_product : Adding product with category 'vr' and url 'https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller'
+2022-10-24 21:01:03,379 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 75, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 21:01:49,036 : INFO : scraper.delete_data : Deleting all products and categories
+2022-10-24 21:13:29,888 : INFO : scraper.add_product : Adding product with category 'vr' and url 'https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller'
+2022-10-24 21:13:30,083 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 75, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 21:14:21,902 : INFO : scraper.add_product : Adding product with category 'vr' and url 'https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1'
+2022-10-24 21:14:25,359 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 239, in _get_product_price
+    return float(self.request_data.find("input", id="attach-base-product-price").get("value"))
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 242, in _get_product_price
+    self.request_data.find("span", class_="a-price a-text-price a-size-medium").span.text.replace("$", "")
+AttributeError: 'NoneType' object has no attribute 'span'
+2022-10-24 21:14:59,116 : INFO : scraper.add_product : Adding product with category 'vr' and url 'https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy'
+2022-10-24 21:14:59,715 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 235, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 21:56:54,047 : INFO : scraper.add_product : Adding product with category 'vr' and url 'https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy'
+2022-10-24 21:56:54,303 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 235, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 21:58:09,537 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy'
+2022-10-24 21:58:10,114 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 235, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 21:58:49,262 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.amazon.com/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_1'
+2022-10-24 21:59:31,492 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 75, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 21:59:34,247 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 239, in _get_product_price
+    return float(self.request_data.find("input", id="attach-base-product-price").get("value"))
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 242, in _get_product_price
+    self.request_data.find("span", class_="a-price a-text-price a-size-medium").span.text.replace("$", "")
+AttributeError: 'NoneType' object has no attribute 'span'
+2022-10-24 21:59:34,479 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 235, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 21:59:34,701 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 30, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 235, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:22:51,560 : ERROR : scraper.add_product : Website 'promelec' is currently not supported
+2022-10-24 22:27:40,220 : ERROR : scraper.add_product : Website 'promelec' is currently not supported
+2022-10-24 22:28:00,797 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:28:00,982 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 443, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:29:04,384 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:29:45,637 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:29:45,843 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 443, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:33:00,343 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:33:00,553 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 443, in _get_product_price
+    return float(self.request_data.find("span").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:34:01,483 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:34:01,673 : INFO : root : None
+2022-10-24 22:34:01,673 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 444, in _get_product_price
+    return float(self.request_data.find("span").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:34:29,978 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:34:30,213 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 444, in _get_product_price
+    return float(self.request_data.find("span").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:35:04,616 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:35:04,851 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 444, in _get_product_price
+    return float(self.request_data.find("span").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:35:42,565 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:35:42,802 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 445, in _get_product_price
+    return float(self.request_data.find("span").get("text"))
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2022-10-24 22:36:47,981 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:36:48,181 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 445, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color"))
+TypeError: float() argument must be a string or a real number, not 'Tag'
+2022-10-24 22:36:59,926 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:37:00,139 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 445, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color"))
+TypeError: float() argument must be a string or a real number, not 'Tag'
+2022-10-24 22:38:21,204 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:38:23,259 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 447, in _get_product_price
+    print(float(re.sub(r"[^0-9.]", "", self.request_data.find("span", class_="price").text.strip())))
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:38:34,049 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:38:34,642 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 447, in _get_product_price
+    print(float(re.sub(r"[^0-9.]", "", self.request_data.find("span", class_="price").text.strip())))
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:38:56,335 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:38:56,714 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 447, in _get_product_price
+    print(re.sub(r"[^0-9.]", "", self.request_data.find("span", class_="price").text.strip()))
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:40:43,987 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:40:44,190 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace(',', '.').replace('руб', '').strip())
+ValueError: could not convert string to float: '348.42 .'
+2022-10-24 22:41:01,061 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:41:01,254 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace(',', '.').replace('.руб', '').strip())
+ValueError: could not convert string to float: '348.42 руб.'
+2022-10-24 22:44:05,906 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:44:06,120 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace(',', '.').replace('.руб', '').strip())
+ValueError: could not convert string to float: '348.42 руб.'
+2022-10-24 22:44:31,232 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:45:01,715 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:45:01,947 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace(',', '.').replace('руб', '').strip())
+ValueError: could not convert string to float: '348.42 .'
+2022-10-24 22:45:26,740 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:45:27,960 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace('руб', '').strip())
+ValueError: could not convert string to float: '348,42 .'
+2022-10-24 22:45:40,308 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:45:40,505 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace('.руб', '').strip())
+ValueError: could not convert string to float: '348,42 руб.'
+2022-10-24 22:46:08,399 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:46:08,586 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/161576/
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 448, in _get_product_price
+    return float(self.request_data.find("span", class_="price-color").text.replace('руб.', '').strip())
+ValueError: could not convert string to float: '348,42'
+2022-10-24 22:46:37,438 : INFO : scraper.add_product : Adding product with category 'new' and url 'https://www.promelec.ru/product/161576/'
+2022-10-24 22:55:56,752 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 77, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 22:55:59,841 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 241, in _get_product_price
+    return float(self.request_data.find("input", id="attach-base-product-price").get("value"))
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 244, in _get_product_price
+    self.request_data.find("span", class_="a-price a-text-price a-size-medium").span.text.replace("$", "")
+AttributeError: 'NoneType' object has no attribute 'span'
+2022-10-24 22:56:00,091 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:56:00,561 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:59:02,752 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 77, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 22:59:05,910 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 241, in _get_product_price
+    return float(self.request_data.find("input", id="attach-base-product-price").get("value"))
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 244, in _get_product_price
+    self.request_data.find("span", class_="a-price a-text-price a-size-medium").span.text.replace("$", "")
+AttributeError: 'NoneType' object has no attribute 'span'
+2022-10-24 22:59:06,146 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 22:59:06,368 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 23:00:50,483 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 77, in _get_product_name
+    return self.request_data.find("div", class_="product-main-info__info").h1.span.text
+AttributeError: 'NoneType' object has no attribute 'h1'
+2022-10-24 23:00:53,607 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy/dp/B098RKWHHZ/ref=lp_16225016011_1_1
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 241, in _get_product_price
+    return float(self.request_data.find("input", id="attach-base-product-price").get("value"))
+AttributeError: 'NoneType' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 34, in get_product_info
+    price = self._get_product_price()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 244, in _get_product_price
+    self.request_data.find("span", class_="a-price a-text-price a-size-medium").span.text.replace("$", "")
+AttributeError: 'NoneType' object has no attribute 'span'
+2022-10-24 23:00:54,079 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'
+2022-10-24 23:00:54,660 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.amazon.com/Nintendo-Switch-OLED-Model-White-Joy
+Traceback (most recent call last):
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 32, in get_product_info
+    raw_name = self._get_product_name()
+  File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 237, in _get_product_name
+    return self.request_data.find("span", id="productTitle").text.strip()
+AttributeError: 'NoneType' object has no attribute 'text'

@@ -2,10 +2,12 @@ import requests
 from requests import Response
 from bs4 import BeautifulSoup
 import json
+import re
 import logging
 from abc import ABC, abstractmethod
 from scraper.format import Format, Info
 from scraper.constants import REQUEST_HEADER, REQUEST_COOKIES
+
 
 
 def request_url(url: str) -> Response:
@@ -435,6 +437,22 @@ class NeweggHandler(BaseWebsiteHandler):
         id = self._get_product_id()
         return f"https://www.newegg.com/p/{id}"
 
+class PromelecHandler(BaseWebsiteHandler):
+    def _get_product_name(self) -> str:
+        return self.request_data.find("h1").text.strip()
+
+    def _get_product_price(self) -> float:
+        return float(self.request_data.find("span", class_="price-color").text.replace('руб.', '').replace(',','.').strip())
+
+    def _get_product_currency(self) -> str:
+        return '₽'
+
+    def _get_product_id(self) -> str:
+        return self.request_data.find("div", class_="popup-product-inf__right popup-product-inf__articul").text
+
+
+    def get_short_url(self) -> str:
+        return self.url
 
 class HifiKlubbenHandler(BaseWebsiteHandler):
     def _get_product_name(self) -> str:
@@ -499,6 +517,8 @@ def get_website_handler(url: str) -> BaseWebsiteHandler:
             return NeweggHandler(url)
         case "hifiklubben":
             return HifiKlubbenHandler(url)
+        case "promelec":
+            return PromelecHandler(url)
         case _:
             logging.getLogger(__name__).error(
                 f"Can't find a website handler - website: '{website_name}' possibly not supported"
@@ -522,4 +542,5 @@ SUPPORTED_DOMAINS = {
     "sharkgaming",
     "newegg",
     "hifiklubben",
+    "promelec",
 }

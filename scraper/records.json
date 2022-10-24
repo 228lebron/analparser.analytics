@@ -1,1 +1,48 @@
-{}
+{
+  "vr": {
+    "null": {
+      "amazon": {
+        "info": {},
+        "datapoints": []
+      }
+    }
+  },
+  "new": {
+    "null": {
+      "promelec": {
+        "info": {},
+        "datapoints": []
+      }
+    },
+    "apple airpods (2nd generation) wireless earbuds with lightning charging case included. over 24 hours of battery life, effortless setup. bluetooth headphones for iphone": {
+      "amazon": {
+        "info": {
+          "url": "https://www.amazon.com/Apple-AirPods-Charging-Latest-Model/dp/B07PXGQC1Q/ref=lp_16225009011_1_1",
+          "id": "B07PXGQC1Q",
+          "currency": "USD"
+        },
+        "datapoints": [
+          {
+            "date": "2022-10-24",
+            "price": 0.0
+          }
+        ]
+      }
+    },
+    "23lc1024t-i/sn, статическое озу 1mбит 20мгц 8soic": {
+      "promelec": {
+        "info": {
+          "url": "https://www.promelec.ru/product/161576/",
+          "id": "23LC1024T-I/SN",
+          "currency": "₽"
+        },
+        "datapoints": [
+          {
+            "date": "2022-10-24",
+            "price": 348.42
+          }
+        ]
+      }
+    }
+  }
+}

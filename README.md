@@ -76,13 +76,13 @@ python3 main.py --delete --all
 
 You can also just delete some products or some categories:
 ```
-python3 main.py --delete --id <id>
+python main.py --delete --id <id>
 ```
 ```
-python3 main.py --delete --name <name>
+python main.py --delete --name <name>
 ```
 ```
-python3 main.py --delete --category <category>
+python main.py --delete --category <category>
 ```
 
 
@@ -92,20 +92,20 @@ Then just add products like described [here](#add-products).
 
 If you just want to reset your data for every product, deleting all datapoints inside every product, then run this command:
 ```
-python3 main.py --reset --all
+python main.py --reset --all
 ```
 This deletes the data inside each product, such as id, url and all datapoints.
 
 
 You can also just reset some products or all products in some categories:
 ```
-python3 main.py --reset --id <id>
+python main.py --reset --id <id>
 ```
 ```
-python3 main.py --reset --name <name>
+python main.py --reset --name <name>
 ```
 ```
-python3 main.py --reset --category <category>
+python main.py --reset --category <category>
 ```
 
 <br/>
@@ -118,7 +118,7 @@ python3 main.py -s
 ```
 To scrape with threads run the same command but with the ```--threads``` argument:
 ```
-python3 main.py -s --threads
+python main.py -s --threads
 ```
 
 <br/>
@@ -127,12 +127,12 @@ python3 main.py -s --threads
 ## Add products <a name="add-products"></a>
 To add a single product, use the following command, where you replace ```<category>``` and ```<url>``` with your category and url:
 ```
-python3 main.py -a -c <category> -u <url>
+python main.py -a -c <category> -u <url>
 ```
 
 e.g.
 ```
-python3 main.py -a -c vr -u https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
+python main.py -a -c vr -u https://www.komplett.dk/product/1168594/gaming/spiludstyr/vr/vr-briller/oculus-quest-2-vr-briller
 ```
 
 This adds the category (if new) and the product to the records.json file, and adds a line at the end of the products.csv file so the script can scrape price of the new product.
@@ -141,11 +141,11 @@ This adds the category (if new) and the product to the records.json file, and ad
 
 To add multiple products at once, just add specify another category and url with ```-c <category>``` and ```-u <url>```. E.g. with the following command I add two products:
 ```
-python3 main.py -a -c <category> -u <url> -c <category2> -u <url2>
+python main.py -a -c <category> -u <url> -c <category2> -u <url2>
 ``` 
 This is equivalent to the above:
 ```
-python3 main.py -a -c <category> <category2> -u <url> <url2>
+python main.py -a -c <category> <category2> -u <url> <url2>
 ```
 
 **OBS**: The url must have the ```https://``` part.<br/>
@@ -171,6 +171,7 @@ This scraper can (so far) scrape prices on products from:
 - [Sharkgaming.dk](https://www.sharkgaming.dk/)
 - [Newegg.com](https://www.newegg.com/) & [Newegg.ca](https://www.newegg.ca/)
 - [HifiKlubben.dk](https://www.hifiklubben.dk/)
+- [promelec.ru](https://www.promelec.ru/)
 
 ****OBS these Amazon domains should work: [.com](https://www.amazon.com/), [.ca](https://www.amazon.ca/), [.es](https://www.amazon.es/), [.fr](https://www.amazon.fr/), [.de](https://www.amazon.de/) and [.it](https://www.amazon.it/)<br/>
 The listed Amazon domains is from my quick testing with one or two products from each domain.<br/>
