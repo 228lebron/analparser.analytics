@@ -22,4 +22,5 @@ WEBSITE_COLORS = {
     "sharkgaming": "midnightblue",
     "newegg": "#f7c20a",
     "hifiklubben": "#231f20",
+    'promelec': 'yellowgreen',
 }
