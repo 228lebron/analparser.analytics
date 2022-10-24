@@ -209,7 +209,7 @@ Default is 0 seconds, but to avoid the website you scrape products from thinking
 ## Clean up data <a name="clean-up-data"></a>
 If you want to clean up your data, meaning you want to remove unnecessary datapoints (datapoints that have the same price as the datapoint before and after it), then run the following command:
 ```
-python3 main.py --clean-data
+python main.py --clean-data
 ```
 <br/>
 
