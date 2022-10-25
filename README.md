@@ -53,7 +53,7 @@ In version v2.3.0, I have add the column ```short_url``` to ```products.csv```. 
 
 Clone this repository and move into the repository:
 ```
-git clone https://github.com/Crinibus/scraper.git
+git clone https://github.com/228lebron/analparser.analytics.git
 ```
 ```
 cd scraper
@@ -71,7 +71,7 @@ pip3 install -r requirements.txt
 
 If you want to start from scratch with no data in the records.json and products.csv files, then just run the following command:
 ```
-python3 main.py --delete --all
+python main.py --delete --all
 ```
 
 You can also just delete some products or some categories:
@@ -114,7 +114,7 @@ python main.py --reset --category <category>
 ## Scrape products <a name="scrape-products"></a>
 To scrape prices of products run this in the terminal:
 ```
-python3 main.py -s
+python main.py -s
 ```
 To scrape with threads run the same command but with the ```--threads``` argument:
 ```
@@ -227,7 +227,7 @@ If you want to view the latest datapoint of a product, you can use the argument 
 
 Example:
 ```
-python3 main.py --name "logitech z533" --latest-datapoint
+python main.py --name "logitech z533" --latest-datapoint
 ```
 
 The above command will show the latest datapoint for all the websites the specified product, in this case "logitech z533", has been scraped from and will show something like this:
@@ -253,7 +253,7 @@ To view all the products you have scraped, you can use the argument ```--print-a
 
 Example:
 ```
-python3 main.py --print-all-products
+python main.py --print-all-products
 ```
 
 This will print all the products in the following format:
@@ -284,7 +284,7 @@ To visualize your data, just run main.py with the ```-v``` or ```--visualize``` 
 
 To show graphs for all products, run the following command:
 ```
-python3 main.py -v --all
+python main.py -v --all
 ```
 
 <br/>
@@ -293,12 +293,12 @@ python3 main.py -v --all
 
 To show a graph for only one product, run the following command where ```<id>``` is the id of the product you want a graph for:
 ```
-python3 main.py -v --id <id>
+python main.py -v --id <id>
 ```
 
 For multiple products, just add another id, like so:
 ```
-python3 main.py -v --id <id> <id>
+python main.py -v --id <id> <id>
 ```
 
 <br/>
@@ -307,12 +307,12 @@ python3 main.py -v --id <id> <id>
 
 To show graphs for all products in one category, run the following command where ```<category>``` is the category you want graph from:
 ```
-python3 main.py -v -c <category>
+python main.py -v -c <category>
 ```
 
 For multiple categories, just add another category, like so:
 ```
-python3 main.py -v -c <category> <category>
+python main.py -v -c <category> <category>
 ```
 
 <br/>
@@ -321,12 +321,12 @@ python3 main.py -v -c <category> <category>
 
 To show graphs for product(s) with a specific name, run the following command where ```<name>``` is the name of the product(s) you want graphs for:
 ```
-python3 main.py -v --name <name>
+python main.py -v --name <name>
 ```
 
 For multiple products with different names, just add another name, like so:
 ```
-python3 main.py -v --name <name> <name2>
+python main.py -v --name <name> <name2>
 ```
 
 If the name of a product has multiple words in it, then just add quotation marks around the name.
@@ -337,11 +337,11 @@ If the name of a product has multiple words in it, then just add quotation marks
 
 To only show graphs for the products that are up to date, use the flag ```--up-to-date``` or ```-utd```, like so:
 ```
-python3 main.py -v --all -utd
+python main.py -v --all -utd
 ```
 The use of the flag ```-utd``` is only implemented when visualizing all products like the example above or when visualizing all products in a category:
 ```
-python3 main.py -v -c <category> -utd
+python main.py -v -c <category> -utd
 ```
 
 <br/>
@@ -350,13 +350,13 @@ python3 main.py -v -c <category> -utd
 
 To compare two products on one graph, use the flag ```--compare``` with flag ```--id``` and/or ```--name```, like so:
 ```
-python3 main.py -v --compare --id <id>
+python main.py -v --compare --id <id>
 ```
 ```
-python3 main.py -v --compare --name <name>
+python main.py -v --compare --name <name>
 ```
 ```
-python3 main.py -v --compare --id <id> --name <name>
+python main.py -v --compare --id <id> --name <name>
 ```
 
 ***OBS** when using ```--name``` multiple products can be visualized*

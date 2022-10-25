@@ -3,6 +3,7 @@ import logging.config
 import logging
 import time
 import scraper
+from tqdm import tqdm
 
 
 def main():
@@ -49,7 +50,7 @@ def scrape():
     products = [scraper.Scraper(category, url) for category, url in zip(products_df["category"], products_df["url"])]
 
     # Scrape and save scraped data for each product (sequentially)
-    for product in products:
+    for product in tqdm(products):
         time.sleep(request_delay)
         product.scrape_info()
         product.save_info()

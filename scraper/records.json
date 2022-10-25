@@ -9,13 +9,19 @@
         },
         "datapoints": [
           {
-            "date": "2022-10-24",
-            "price": 348.42
+            "date": "2022-10-25",
+            "price": 348.42,
+            "quantity": 500
+          },
+          {
+            "date": "2022-10-30",
+            "price": 287.4,
+            "quantity": 252
           },
           {
             "date": "2022-10-25",
             "price": 348.42,
-            "quantity": 500
+            "quantity": 230
           }
         ]
       }
@@ -30,6 +36,16 @@
           "currency": "₽"
         },
         "datapoints": [
+          {
+            "date": "2022-10-25",
+            "price": 351.4,
+            "quantity": 246
+          },
+          {
+            "date": "2022-10-30",
+            "price": 228.4,
+            "quantity": 700
+          },
           {
             "date": "2022-10-25",
             "price": 351.4,
