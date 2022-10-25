@@ -15,7 +15,25 @@
           {
             "date": "2022-10-25",
             "price": 348.42,
-            "quantity": 50
+            "quantity": 500
+          }
+        ]
+      }
+    }
+  },
+  "TI": {
+    "ucc2895dwtr, коммутационные контроллер": {
+      "promelec": {
+        "info": {
+          "url": "https://www.promelec.ru/product/254413/",
+          "id": "UCC2895DWTR",
+          "currency": "₽"
+        },
+        "datapoints": [
+          {
+            "date": "2022-10-25",
+            "price": 351.4,
+            "quantity": 246
           }
         ]
       }

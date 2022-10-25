@@ -70,3 +70,12 @@ Traceback (most recent call last):
   File "D:\PyProjects\analparser\scraper\scraper\domains.py", line 460, in _get_product_quantity
     return int(self.request_data.find("span", class_="table-list__counter").text)
 ValueError: invalid literal for int() with base 10: 'В наличии'
+2022-10-25 11:32:38,833 : INFO : scraper.add_product : Adding product with category 'TI' and url 'https://www.promelec.ru/product/254413/'
+2022-10-25 11:32:39,145 : ERROR : scraper.domains : Could not get all the data needed from url: https://www.promelec.ru/product/254413/
+Traceback (most recent call last):
+  File "E:\PyProjects\analp\analparser.analytics\scraper\domains.py", line 36, in get_product_info
+    quantity = self._get_product_quantity()
+  File "E:\PyProjects\analp\analparser.analytics\scraper\domains.py", line 460, in _get_product_quantity
+    return int(self.request_data.find_all("span", class_="table-list__counter")[-2].text.replace('шт', '').strip())
+ValueError: invalid literal for int() with base 10: 'Мин: 4'
+2022-10-25 11:35:45,572 : INFO : scraper.add_product : Adding product with category 'TI' and url 'https://www.promelec.ru/product/254413/'

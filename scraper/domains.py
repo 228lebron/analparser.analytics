@@ -457,7 +457,8 @@ class PromelecHandler(BaseWebsiteHandler):
 
     def _get_product_quantity(self) -> int:
         #print(self.request_data.find_all("span", class_="table-list__counter")[-2].text.replace('шт', '').strip())
-        return int(self.request_data.find_all("span", class_="table-list__counter")[-2].text.replace('шт', '').strip())
+        table = self.request_data.find_all("div", class_="js-accordion-wrap")[0]
+        return int(table.find_all("span", class_="table-list__counter")[-4].text.replace('шт', '').strip())
 
 
     def get_short_url(self) -> str:
